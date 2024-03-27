@@ -26,7 +26,8 @@ def serieStart(serie):
     start_sound_serie = pygame.mixer.Sound("startserie.mp3")
     start_sound_serie.play()
     sleep(2)
-def serierest(serie):
+def serierest(serie, series):
+
     text_to_speech(f"finish set number {serie}", "finishserie.mp3")
     finish_sound_serie = pygame.mixer.Sound("finishserie.mp3")
     finish_sound_serie.play()
@@ -42,7 +43,7 @@ def exercicestart(exercise):
     start_sound.play()
 
 def exercicesrest():
-    text_to_speech("rest exercice ", "rest.mp3")
+    text_to_speech("rest  ", "rest.mp3")
     rest = pygame.mixer.Sound("rest.mp3")
     rest.play()
     sleep(2)

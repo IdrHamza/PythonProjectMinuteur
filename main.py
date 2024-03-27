@@ -1,11 +1,11 @@
 from timer import *
 from exercice import *
 nombre_exercices = int(input("Entrer le nombre d'exercices : "))
-number_of_serie=int(input("Entrer le nombre de serie  "))
+number_of_serie=int(input("Entrer le nombre de serie : "))
 exercises = []
 
-for _ in range(nombre_exercices):
-    nom = input("Entrer le nom de l'exercice : ")
+for i  in range(1,nombre_exercices+1):
+    nom = input(f"Entrer le nom de l'exercice {i} : ")
     exercise = Exercise(nom)
     exercises.append(exercise)
 

@@ -17,22 +17,24 @@ class Timer:
             for exercise in exercises:
                 print(f"Exercice: {exercise.name}")
                 exercicestart(exercise)
-                for i in range(self.time_exercise):
+                for i in range(1,self.time_exercise+1):
                     sleep(1)
                     print(i)
 
 
                 print("Repos entre exercices")
                 exercicesrest()
-                for i in range(self.time_rest):
+                for i in range(1,self.time_rest+1):
                     sleep(1)
                     print(i)
 
 
-            print("Repos entre séries")
-            serierest(serie)
 
-            for i in range(self.time_rest_series):
-                sleep(1)
-                print(i)
+            if serie<series:
+                print("Repos entre séries")
+                serierest(serie)
+
+                for i in range(1,self.time_rest_series +1):
+                    sleep(1)
+                    print(i)
         finish_sound.play()
